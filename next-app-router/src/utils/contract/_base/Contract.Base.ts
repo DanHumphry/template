@@ -27,7 +27,9 @@ export default abstract class ContractBase {
         this.contract = new Contract(
             contractObj.baseAddress,
             iface.format(),
-            new ethers.BrowserProvider(provider as Eip1193Provider),
+            typeof provider === 'string'
+                ? new ethers.JsonRpcProvider(provider)
+                : new ethers.BrowserProvider(provider as Eip1193Provider),
         );
     }
 
