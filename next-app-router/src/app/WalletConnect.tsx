@@ -197,7 +197,7 @@ export default function WalletConnect() {
 
                 <div>
                     <button disabled={isLoading} onClick={expectWriteCount}>
-                        count 예상하기
+                        count 예상하기 (writeCount return value)
                     </button>
                     {expectCount && <p>{expectCount}</p>}
                 </div>
