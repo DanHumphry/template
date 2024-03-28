@@ -12,7 +12,7 @@ import constantAddress from '@/utils/contract/_deployed/mumbai/address.json';
 import { Transaction } from '@/components/blocks/modal/TransactionModal';
 import { putPendingTransaction } from '@/ducks/slice/wallet.slice';
 import useWalletHook from '@/hooks/useWallet.hook';
-import useLanguages from '@/hooks/useLanguages.hook';
+// import useLanguages from '@/hooks/useLanguages.hook';
 import Counter from '@/utils/contract/Counter';
 
 const Container = styled.div`
@@ -42,7 +42,7 @@ const Container = styled.div`
  */
 export default function WalletConnect() {
     const dispatch = useDispatch();
-    const Lang = useLanguages();
+    // const Lang = useLanguages();
 
     const { open } = useWeb3Modal();
     const { disconnect } = useDisconnect();
